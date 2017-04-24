@@ -1,6 +1,9 @@
-# IslandEngine
+# Island Engine
 
-**TODO: Add description**
+A simple engine that will spawn new Agent processes under a supervised tree
+for each game of "Island" a.k.a Battleship but without the lawsuit.
+
+This application will be serving websockets via Channels through Phoenix as a mixed in module.  Documentation to come.
 
 ## Installation
 
@@ -21,4 +24,3 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
       [applications: [:island_engine]]
     end
     ```
-
