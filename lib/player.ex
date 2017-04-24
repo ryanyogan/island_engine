@@ -17,9 +17,13 @@ defmodule IslandEngine.Player do
     "%Player{" <> string_body(player) <> "}"
   end
 
-  # defp string_body(player) do
-  #   state = Agent.get(player, &(&1))
-  #   ":name => " <> name_to_string(state.nane) <> ",\n" <>
-  #   ":island_set => " <> IslandSet.to_s
-  # end
+  defp string_body(player) do
+    state = Agent.get(player, &(&1))
+    ":name => " <> name_to_string(state.name) <> ",\n" <>
+    ":island_set => " <> IslandSet.to_string(state.island_set) <> ",\n" <>
+    ":board => " <> Board.to_string(state.board)
+  end
+
+  defp name_to_string(:name), do: ":name"
+  defp name_to_string(name), do: ~s("#{name}")
 end
